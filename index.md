@@ -3,13 +3,16 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "YonderL"
+  text: "My Digital Space"
+  tagline: 持续学习，无限进步
+  image:
+    src: /background.png
+    alt: 背景图
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: About me
+      link: /AboutMe
     - theme: alt
       text: API Examples
       link: /api-examples
