@@ -14,15 +14,18 @@ hero:
       text: About me
       link: /AboutMe
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Pub&Proj
+      link: /333/111.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 技术博客
+    details: 记录学习内容与技术栈
+    link: /111/111.md
+  - title: 随笔
+    details: 生活感想
+    link: /222/111.md
+  - title: 论文&项目
+    details: 关于我的publication
+    link: /333/111.md
 ---
 
