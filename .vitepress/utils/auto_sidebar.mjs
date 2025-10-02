@@ -1,9 +1,8 @@
 import path from "node:path";
 import fs from "node:fs";
 
-// 文件根目录
 const DIR_PATH = path.resolve();
-// 白名单,过滤不是文章的文件和文件夹
+
 const WHITE_LIST = [
   "index.md",
   ".vitepress",
@@ -12,59 +11,77 @@ const WHITE_LIST = [
   "assets",
 ];
 
-// 判断是否是文件夹
-const isDirectory = (path) => fs.lstatSync(path).isDirectory();
+const isDirectory = (p) => fs.lstatSync(p).isDirectory();
 
-// 取差值
-const intersections = (arr1, arr2) =>
-  Array.from(new Set(arr1.filter((item) => !new Set(arr2).has(item))));
+// 辅助：过滤白名单和 _pic 文件夹
+function shouldSkip(name, fullPath) {
+  if (WHITE_LIST.includes(name)) return true;
+  if (isDirectory(fullPath) && name.endsWith('_pic')) return true;
+  return false;
+}
 
-// 把方法导出直接使用
-function getList(params, path1, pathname) {
-  // 存放结果
+function getList(params, dirPath, pathname) {
   const res = [];
-  // 开始遍历params
-  for (let file in params) {
-    // 拼接目录
-    const dir = path.join(path1, params[file]);
-    // 判断是否是文件夹
-    const isDir = isDirectory(dir);
-    if (isDir) {
-      // 如果是文件夹,读取之后作为下一次递归参数
-      const files = fs.readdirSync(dir);
+  for (const file of params) {
+    const fullPath = path.join(dirPath, file);
+    if (shouldSkip(file, fullPath)) continue;
+
+    if (isDirectory(fullPath)) {
+      const subFiles = fs.readdirSync(fullPath);
       res.push({
-        text: params[file],
+        text: file,
         collapsible: true,
-        items: getList(files, dir, `${pathname}/${params[file]}`),
+        items: getList(subFiles, fullPath, `${pathname}/${file}`),
       });
     } else {
-      // 获取名字
-      const name = path.basename(params[file]);
-      // 排除非 md 文件
-      const suffix = path.extname(params[file]);
-      if (suffix !== ".md") {
-        continue;
-      }
+      if (path.extname(file) !== '.md') continue;
+      const baseName = path.basename(file, '.md');
       res.push({
-        text: name,
-        link: `${pathname}/${name}`,
+        text: baseName,
+        link: `${pathname}/${baseName}`,
       });
     }
   }
-  // 对name做一下处理，把后缀删除
-  res.map((item) => {
-    item.text = item.text.replace(/\.md$/, "");
-  });
   return res;
 }
 
+/**
+ * 生成以当前文件夹名为顶层标题的侧边栏结构
+ * @param {string} pathname - 如 '/blogs/ROS'
+ * @returns {Array} VitePress sidebar 格式
+ */
 export const set_sidebar = (pathname) => {
-  // 获取pathname的路径
-  const dirPath = path.join(DIR_PATH, pathname);
-  // 读取pathname下的所有文件或者文件夹
-  const files = fs.readdirSync(dirPath);
-  // 过滤掉
-  const items = intersections(files, WHITE_LIST);
-  // getList 函数后面会讲到
-  return getList(items, dirPath, pathname);
+  // 标准化路径：去掉开头的 /
+  const cleanPath = pathname.replace(/^\/+/, '');
+  const absPath = path.join(DIR_PATH, cleanPath);
+
+  // 获取当前文件夹名（如 ROS）
+  const folderName = path.basename(cleanPath);
+
+  // 读取该文件夹下的内容
+  let files = [];
+  try {
+    files = fs.readdirSync(absPath);
+  } catch (err) {
+    console.warn(`[auto_sidebar] 路径不存在: ${absPath}`);
+    return [];
+  }
+
+  // 过滤白名单和 _pic
+  const filteredFiles = files.filter(file => {
+    const fullPath = path.join(absPath, file);
+    return !shouldSkip(file, fullPath);
+  });
+
+  // 获取内部 items
+  const items = getList(filteredFiles, absPath, `/${cleanPath}`);
+
+  // 返回包裹结构
+  return [
+    {
+      text: folderName,
+      collapsible: true,
+      items: items,
+    }
+  ];
 };

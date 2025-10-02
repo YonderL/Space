@@ -23,7 +23,7 @@ const myStack = {
   languages: ['Python', 'C++', 'Matlab'],
 
   // 深度学习 & 计算机视觉
-  dl_cv: ['PyTorch', 'OpenCV', 'YOLO', 'CNN / Transformer / GAN', 'Pytorch'],
+  dl_cv: ['PyTorch', 'OpenCV', 'YOLO', 'CNN / Transformer / GAN'],
 
   // 机器人框架与仿真
   robotics: ['ROS', 'PX4', 'Gazebo / Rviz'],
