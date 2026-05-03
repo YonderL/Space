@@ -1,72 +1,109 @@
-# About Me
-## 🧠 我是谁？
-
-::: info
-学生 × 二次元爱好者 × 抽象青年
-:::
-      
-我是**刘洋**，2005年出生于河南濮阳。目前，我就读于**湖南大学人工智能与机器人学院**，攻读**机器人工程**学士学位，正处在本科第四年的关键阶段🎓。一年后我将前往**中国科学院空天信息创新研究院**（空天院），开启硕士研究生生涯🛰️。未来我将继续深耕**智能无人系统与机器视觉**方向，而当前我的研究聚焦于**空地协同感知**领域——希望通过融合无人机与车载传感器，为环境监测、自动驾驶等场景提供更高效的感知方案，让智能科技真正服务于社会需求。
-
-除了科研与学业，我还是个**多元爱好者**：作为**二次元爱好者**，我喜欢在动画与漫画中感受不同的故事视角；作为**抽象青年**，我乐于用发散的思维观察生活，把看似不相关的事物串联出有趣的联想——这些爱好也让我在科研中保持着对新鲜事物的好奇心与创造力。
-
+---
+layout: page
+title: About Me
+description: Liu Yang's research profile.
 ---
 
-## 🛠️ 技术栈
+<section class="about-profile">
+  <div class="about-lead">
+    <p class="kicker">About Me</p>
+    <h1>刘洋</h1>
+    <p class="about-statement">
+      湖南大学机器人工程本科生，已推免至中国科学院大学空天信息创新研究院。我的兴趣集中在具身智能、机器人感知、三维多目标跟踪、生成式模型，以及真实场景下的感知-规划-控制闭环。
+    </p>
+    <p class="about-note">
+      我关注能落到真实平台上的算法：从移动机器人视觉感知和运动控制，到阿克曼底盘机器人的 SLAM 与路径规划，再到人形双臂机器人在农业场景中的 6D 位姿估计、示教策略和 ACT 粗靠近。
+    </p>
+  </div>
 
-::: tip
-我常用的技术工具链：
-:::
+  <div class="profile-facts" aria-label="profile facts">
+    <div>
+      <span>Education</span>
+      <strong>湖南大学 / 机器人工程</strong>
+      <p>2022.09 - 2026.06</p>
+    </div>
+    <div>
+      <span>Next</span>
+      <strong>中国科学院大学 / 空天信息创新研究院</strong>
+      <p>信号与信息处理，2026.09 入学</p>
+    </div>
+    <div>
+      <span>Rank</span>
+      <strong>GPA 3.81 / 4.00</strong>
+      <p>专业排名 6 / 68</p>
+    </div>
+    <div>
+      <span>Contact</span>
+      <strong><a href="mailto:2320262467@qq.com">2320262467@qq.com</a></strong>
+      <p><a href="https://github.com/YonderL/" target="_blank" rel="noreferrer">GitHub: YonderL</a></p>
+    </div>
+  </div>
 
-```js
-const myStack = {
-  // 编程语言
-  languages: ['Python', 'C++', 'Matlab'],
+  <div class="about-section-heading">
+    <p>Research Interests</p>
+    <h2>研究兴趣</h2>
+  </div>
 
-  // 深度学习 & 计算机视觉
-  dl_cv: ['PyTorch', 'OpenCV', 'YOLO', 'CNN / Transformer / GAN'],
+  <div class="interest-grid">
+    <article>
+      <span>01</span>
+      <h3>具身智能与机器人操作</h3>
+      <p>双臂机器人植株养护、NAO 小型人形机器人控制、家居场景语义导航与灵巧操作。</p>
+    </article>
+    <article>
+      <span>02</span>
+      <h3>机器人感知与空间智能</h3>
+      <p>目标检测、SLAM、点云处理、路径规划，以及感知算法在真实平台上的部署。</p>
+    </article>
+    <article>
+      <span>03</span>
+      <h3>三维多目标跟踪与 BEV 感知</h3>
+      <p>跨视角实例匹配、VLM 语义特征、轨迹特征融合与端到端 3D MOT。</p>
+    </article>
+    <article>
+      <span>04</span>
+      <h3>生成式模型与跨模态理解</h3>
+      <p>SAR 到 RGB 图像翻译、GAN 网络结构设计、隐式神经表征与多模态生成。</p>
+    </article>
+  </div>
 
-  // 机器人框架与仿真
-  robotics: ['ROS', 'PX4', 'Gazebo / Rviz'],
+  <div class="about-section-heading">
+    <p>Toolchain</p>
+    <h2>技术栈</h2>
+  </div>
 
-  // 开发与部署工具
-  tools: ['Git']
-};
-```
+  <div class="stack-board">
+    <section>
+      <h3>Languages</h3>
+      <p>Python / C/C++ / MATLAB</p>
+    </section>
+    <section>
+      <h3>Learning</h3>
+      <p>PyTorch / YOLO / Transformer / GAN / VLM</p>
+    </section>
+    <section>
+      <h3>Robotics</h3>
+      <p>ROS / Gazebo / Rviz / PX4 / Naoqi</p>
+    </section>
+    <section>
+      <h3>Perception</h3>
+      <p>OpenCV / PCL / TensorRT / A-LOAM</p>
+    </section>
+  </div>
 
-## 🔍 研究兴趣
+  <div class="current-work">
+    <div>
+      <p>Current Work</p>
+      <h2>面向番茄生长周期养护的人形双臂机器人算法</h2>
+      <span>北京源络科技有限公司 / 2026.02 至今</span>
+    </div>
+    <p>
+      我参与人形双臂机器人在番茄生长周期中的授粉、剪枝与摘果算法，负责花朵识别、枝杈识别、6D 位姿估计、人工示教策略矩阵构建，以及基于 ACT + KeyPoint 的机械臂末端粗靠近策略。
+    </p>
+  </div>
 
-::: warning
-我长期关注以下方向的交叉与落地：
-:::
-
-- **跨模态图像生成算法**  
-- **自主多智能体感知算法研究**  
-- **模型轻量化与部署**  
-
-> 💡 **我始终被一个问题驱动**：  
-> **如何让智能体在复杂、不确定、甚至对抗性的环境中，依然安全、鲁棒、自主地完成任务？**
-
-## ✍️ 我在写什么？
-
-::: tip
-我在博客中主要分享：
-
-- 深度学习与机器人系统的工程实践与学习笔记  
-- 对经典论文或开源项目的复现与思考  
-- 我的论文与项目  
-- 随笔（学习方法与科研心得）
-:::
-
-你可以在导航栏的「技术博客」中找到这些文章。
-
-## 📬 联系我
-::: danger
-欢迎学术交流、技术讨论或开源合作！
-:::
-
-- **GitHub**：[@YonderL](https://github.com/YonderL)  
-- **邮箱**：[ly758963@hnu.edu.cn](mailto:ly758963@hnu.edu.cn)  
-
-> 若有合作意向或问题，欢迎通过 **GitHub Issues** 或 **邮件** 联系，我会尽快回复！
-
-感谢你来到这里。愿我们都能在智能体的世界里，走得更远、更稳。
+  <div class="writing-note">
+    <strong>What I write</strong>
+    <p>这个站点会持续记录我的机器人系统实践、论文和项目复盘，以及阶段性的学习思考。技术博客目前主要包括 ROS、C++、仿真系统、路径规划、视觉感知、Cartographer、URDF/Xacro 等内容。</p>
+  </div>
+</section>
