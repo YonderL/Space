@@ -45,7 +45,7 @@ description: Embodied AI, robotic perception, and generative models portfolio.
     <article>
       <span>01</span>
       <h2>具身感知与控制</h2>
-      <p>围绕移动机器人、人形机器人与双臂操作平台，完成目标检测、定位建图、路径规划、末端策略和真实平台部署。</p>
+      <p>围绕移动机器人、人形机器人与真实场景感知任务，完成目标检测、定位建图、路径规划和平台部署。</p>
     </article>
     <article>
       <span>02</span>
@@ -61,9 +61,9 @@ description: Embodied AI, robotic perception, and generative models portfolio.
 
   <section class="timeline-strip">
     <div>
-      <p>Current</p>
-      <h2>北京源络科技有限公司</h2>
-      <span>面向番茄生长周期养护的人形双臂机器人算法，负责花朵识别、枝杈识别、6D 位姿估计、示教策略和 ACT 粗靠近。</span>
+      <p>Focus</p>
+      <h2>具身智能与机器人感知</h2>
+      <span>关注可部署的视觉感知、空间理解、轨迹建模与机器人系统工程实践。</span>
     </div>
     <div>
       <p>Next</p>

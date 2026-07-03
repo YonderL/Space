@@ -15,7 +15,7 @@ description: Research work, internships, and engineering projects.
   </a>
   <a href="/Space/Publication/Project.html">
     <strong>Projects</strong>
-    <span>双臂机器人、移动机器人、NAO、DexSeeker</span>
+    <span>移动机器人、NAO、DexSeeker、AI 生活助手</span>
   </a>
 </div>
 

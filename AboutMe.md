@@ -12,7 +12,7 @@ description: Liu Yang's research profile.
       湖南大学机器人工程本科生，已推免至中国科学院大学空天信息创新研究院。我的兴趣集中在具身智能、机器人感知、三维多目标跟踪、生成式模型，以及真实场景下的感知-规划-控制闭环。
     </p>
     <p class="about-note">
-      我关注能落到真实平台上的算法：从移动机器人视觉感知和运动控制，到阿克曼底盘机器人的 SLAM 与路径规划，再到人形双臂机器人在农业场景中的 6D 位姿估计、示教策略和 ACT 粗靠近。
+      我关注能落到真实平台上的算法：从移动机器人视觉感知和运动控制，到阿克曼底盘机器人的 SLAM 与路径规划，再到复杂场景中的空间理解与机器人操作策略。
     </p>
   </div>
 
@@ -48,7 +48,7 @@ description: Liu Yang's research profile.
     <article>
       <span>01</span>
       <h3>具身智能与机器人操作</h3>
-      <p>双臂机器人植株养护、NAO 小型人形机器人控制、家居场景语义导航与灵巧操作。</p>
+      <p>人形机器人控制、家居场景语义导航、灵巧操作与真实世界交互。</p>
     </article>
     <article>
       <span>02</span>
@@ -89,17 +89,6 @@ description: Liu Yang's research profile.
       <h3>Perception</h3>
       <p>OpenCV / PCL / TensorRT / A-LOAM</p>
     </section>
-  </div>
-
-  <div class="current-work">
-    <div>
-      <p>Current Work</p>
-      <h2>面向番茄生长周期养护的人形双臂机器人算法</h2>
-      <span>北京源络科技有限公司 / 2026.02 至今</span>
-    </div>
-    <p>
-      我参与人形双臂机器人在番茄生长周期中的授粉、剪枝与摘果算法，负责花朵识别、枝杈识别、6D 位姿估计、人工示教策略矩阵构建，以及基于 ACT + KeyPoint 的机械臂末端粗靠近策略。
-    </p>
   </div>
 
   <div class="writing-note">
